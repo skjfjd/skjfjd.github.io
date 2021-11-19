@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  .box {
+    width: 200px;
+    height: 100px;
+    background-color: beige;
+  }
+
+  .inner {
+    width: 50%;
+    height: 50%;
+    background-color: blue;
+
+  }
+
+  .inner1 {
+ margin: auto;  /*수평 적으로만 옮겨짐 */
+  }
+  .box2 {
+  text-align: center; /*블럭 레벨은 적용 안됨  div 적용 안됨 적용할려면 margin auto 사용 해야 함 */
+  }
+
+  .inner3 {
+    transform: translate(50% , 50%);  /* 중간 정렬 가능함*/;
+
+  }
+
+  .box4 h1 {
+    text-align: center;
+  line-height: 100px;  /* 수직 으로 맞춰줌 */
+  }
+
+</style>
+<body>
+<h3>margin: auto</h3>
+<div class="box box1">
+  <div class="inner inner1"></div>
+</div>
+
+<h3>text-align: center</h3>
+<div class="box box2">
+  <button>Text</button>
+</div>
+
+
+<h3>translate(50% , 50%)</h3>
+<div class="box box3">
+  <div class="inner inner3"></div>
+</div>
+
+<h3>Text centering</h3>
+<div class="box box4">
+  <h1>Text <br>Text</h1>
+</div>
+
+
+
+</body>
+</html>

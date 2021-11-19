@@ -38,7 +38,7 @@
 
         /* Universal tags */
     *{
-         box-sizing: border-box;
+         box-sizing: border-box;  /* padding margin 이 있어도 원본에 손상안가게 함  */
     }
     body {
       font-family: 'Open Sans', sans-serif;
@@ -65,11 +65,11 @@ h1 {
     font-size: var(--font-large);
     font-weight: var(--weight-bold);
     color: var(--color-black);
-    margin: 16px 0;
+    margin: 16px 0px;
 }
 
 h2 {
-    font-size: var(--font-medium);
+    font-size: var(--font-regular);
     font-weight: var(--weight-semi-bold);
     color: var(--color-black);
     margin: 8px 0;
@@ -78,7 +78,7 @@ h2 {
 h3 {
     font-size: var(--font-regular);
     font-weight: var(--font-regular);
-    color: var(--color-dark-black);
+    color: var(--color-black);
     margin: 8px 0;
 }
 
@@ -109,11 +109,7 @@ p {
     padding: 0;
 }
 
-.navbar__menu {
-    display: flex;
 
-
-}
 .navbar__logo {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
@@ -121,6 +117,10 @@ p {
 .navbar__logo.name {
     color: var(--color-white);
 
+}
+
+.navbar__menu {
+    display: flex;
 }
 
 .navbar__menu__item {
@@ -177,11 +177,12 @@ p {
 .home__contact:hover {
     background-color: var(--color-orange);
 }
+
+
 /* Section common*/
 .section {
     text-align: center;
     padding: 50px;
-
     margin: auto;
 }
 .section__container {
@@ -263,7 +264,7 @@ p {
     background-color: var(--color-dark-grey);
     padding: 20px 40px;
 }
-.skill_description {
+.skill__description {
     display: flex;
     justify-content: space-between;
 }
@@ -419,10 +420,10 @@ p {
 
 
 }
-.testimonial__avatar:nth-child(odd){
+.testimonial__avatar:nth-child(odd){ /*홀수*/
     margin-right: 40px;
     }
-.testimonial__avatar:nth-child(even){
+.testimonial__avatar:nth-child(even){ /*짝수*/
     margin-left: 40px;
 }
 
@@ -477,18 +478,18 @@ p {
     position: fixed;
     bottom: 50px;
     right: 50px;
-    font-size: 50px;
-    color: var(--color-white);
-    background-color: var(--color-puple);
-    border-radius: 50%;
-    opacity: 0;
-    pointer-events: none;
+    font-size: 50px;  /* 원본의 크기를 뜻함 */
+    color: var(--color-white);  /* 원본의 색깔 */
+    background-color: var(--color-puple); /* 말 그대로 원본의 바탕 색깔 */
+    border-radius: 50%; /* 둥그스럽게 만들기 */
+    opacity: 0;  /* 투명도 */
+    pointer-events: none; /* 버튼 안보일때 포인터 없애기 */
     transition: opacity var(--animation-duration) ease-in;
 }
 
 .arrow-up.visible {
     opacity: 1;
-    pointer-events: auto;
+    pointer-events: auto;  /* 포인터 생길떄 이벤트 발생 시켜준다 */
 
 }
 

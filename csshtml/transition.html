@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+      background-color: pink;
+    }
+
+    .box1:hover {
+      background-color: blueviolet;
+      transition: background-color 300ms linear;
+    }
+
+    .box2:hover {
+      border-radius: 50%;
+      background-color: cornflowerblue;
+      transition: all 2s ease;
+    }
+
+    .box3:hover {
+      border-radius: 50%;
+      transform: translateX(400px);
+      background-color: cornflowerblue;
+      transition: all 2s cubic-bezier(1,-0.03,.06,.97);
+    }
+
+  </style>
+</head>
+<body>
+<div class="box box1"></div>
+<div class="box box2"></div>
+<div class="box box3"></div>
+</body>
+</html>

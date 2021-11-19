@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom properties</title>
+  <style>
+    :root {
+     --background-color : thistle;
+      --font--size: 32px;
+      --base-space:8px;
+    }
+    .first-list {
+      background-color: var(--background-color);
+      color: whitesmoke;
+      margin-left: var(--base-space, 8);
+      font-size: var(--font--size);
+    }
+
+
+    .second-list {
+      background-color: var(--background-color);
+    font-size: var(--font--size);
+      color: whitesmoke;
+      margin-left: calc(var(--base-space)*2);
+    }
+
+    @media screen  and (max-width: 768px){
+      :root {
+        --background-color : salmon;
+        color: whitesmoke;
+        --font--size: 32px;
+        --base-space:8px;
+      }
+    }
+  </style>
+</head>
+<body>
+      <ul class="first-list">
+        <li>Orange</li>
+        <li>Apple</li>
+      </ul>
+      <ul class="second-list">
+        <li>Korea</li>
+        <li>Japan</li>
+        <li>China</li>
+      </ul>
+</body>
+</html>

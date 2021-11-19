@@ -12,6 +12,8 @@ document.addEventListener('scroll', () => {
         navbar.classList.remove('navbar--dark');
     }
 });
+
+
 // Navbar toggle button for small screen
 const toggleBtn = document.querySelector('.navbar__toggle-btn');
 toggleBtn.addEventListener('click', () => {
@@ -24,7 +26,7 @@ const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
 
     const target =event.target;
-    const link = target.dataset.link;
+    const link = target.dataset.link;  // link 는  html  data-link 이뜻.
     if (link == null) {
         return;
     }
@@ -41,7 +43,7 @@ contact.addEventListener('click', (event) => {
 
 // Make home slowly fade to transparent as the window scrolls down
 const home = document.querySelector('.home__container');
-const homeHeight = home.getBoundingClientRect().height;
+const homeHeight = home.getBoundingClientRect().height;  //높이를 알아내기
 document.addEventListener('scroll', () => {
    home.style.opacity= 1-window.scrollY / homeHeight;
 });
@@ -101,19 +103,20 @@ workBtnContainer.addEventListener('click', (e) => {
 // 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다.
 
 const sectionIds = [
-    '#home' ,
-    '#about' ,
-    '#skills' ,
-    '#work' ,
-    '#testimonials' ,
+    '#home',
+    '#about',
+    '#skills',
+    '#work',
+    '#testimonials',
     '#contact',
 ];
-
 const sections = sectionIds.map(id => document.querySelector(id));
 const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`));
 
+
 let selectedNavIndex =0 ;
 let selectedNavItem = navItems[0];
+
 function selectNavItem(selected) {
     selectedNavItem.classList.remove('active');
     selectedNavItem = selected;
@@ -157,3 +160,4 @@ window.addEventListener('wheel', () => {
     }
     selectNavItem(navItems[selectedNavIndex]);
 });
+

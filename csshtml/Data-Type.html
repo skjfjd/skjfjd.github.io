@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Attributes</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: tomato;
+      margin-bottom: 50px;
+    }
+
+    div[data-display-name='JinHa']{
+      background-color: beige;
+    }
+  </style>
+</head>
+<body>
+<div data-index="1" data-display-name="JinHa"></div>
+<div data-index="2" data-display-name="Coding"></div>
+<span data-index="1" data-display-name="JinHa">ddd</span>
+
+<script>
+    const JinHa = document.querySelector('div[data-display-name="JinHa"]');
+    console.log(JinHa.dataset);
+    console.log(JinHa.dataset.displayName);
+    console.log(JinHa.dataset.index);
+
+</script>
+</body>
+</html>
